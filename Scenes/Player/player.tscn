@@ -20,6 +20,7 @@ fill_from = Vector2(0.5, 0.5)
 [node name="player" type="CharacterBody2D" node_paths=PackedStringArray("animated_sprite")]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_vy3t3")
+speed = 400
 animated_sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

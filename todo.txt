@@ -1,0 +1,9 @@
+Weapons that have upgrade components that modify the stats and behavior of the weapons:
+	- Infinite ammo pistols as starting weapons
+	- Pneumatic and Ballistic weaponry:
+		- Pneumatic provdies no muzzle flash and is safer to use but weaker
+		- Ballistic provides muzzle flash and is stronger but more dangerous to use
+	- Grenades and Flashbangs:
+		- Grenades are very strong and powerful, and send shrapnel out in different directions
+		- Flashbangs temporarily stun enemies and light the room up
+Randomly put together room sets (include random decoration)
