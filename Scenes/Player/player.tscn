@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://c0j1yllh8jusm"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_vy3t3"]
-[ext_resource type="Texture2D" uid="uid://876uphes8eqp" path="res://icon.svg" id="2_xr1cq"]
+[ext_resource type="Texture2D" uid="uid://xbodxmy1rlho" path="res://Sprites/player_prototype.png" id="2_8al5j"]
 [ext_resource type="PackedScene" uid="uid://d1l7gcr2rk64t" path="res://Scenes/Camera/camera.tscn" id="3_anql0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_j7qb6"]
@@ -20,14 +20,15 @@ fill_from = Vector2(0.5, 0.5)
 [node name="player" type="CharacterBody2D" node_paths=PackedStringArray("animated_sprite")]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_vy3t3")
-speed = 400
+speed = 250
 animated_sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_j7qb6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_xr1cq")
+scale = Vector2(2, 2)
+texture = ExtResource("2_8al5j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_1nj8b")
