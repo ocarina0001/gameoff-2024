@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://dacsok24ohbm4"]
+
+[ext_resource type="Texture2D" uid="uid://lmb307qv4l41" path="res://Sprites/item_sheet_prototype.png" id="1_1ladb"]
+
+[sub_resource type="Gradient" id="Gradient_adigj"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8ukde"]
+gradient = SubResource("Gradient_adigj")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="Shield" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1ladb")
+region_enabled = true
+region_rect = Rect2(0, 16, 16, 16)
+
+[node name="LightContainer" type="Node2D" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="LightContainer"]
+scale = Vector2(0.1, 0.1)
+color = Color(1, 1, 0, 1)
+texture = SubResource("GradientTexture2D_8ukde")
+
+[node name="PointLight2D2" type="PointLight2D" parent="LightContainer"]
+position = Vector2(0, 6)
+scale = Vector2(0.1, 0.1)
+color = Color(1, 1, 0, 1)
+texture = SubResource("GradientTexture2D_8ukde")
+
+[node name="PointLight2D3" type="PointLight2D" parent="LightContainer"]
+position = Vector2(5, -5)
+scale = Vector2(0.1, 0.1)
+color = Color(1, 1, 0, 1)
+texture = SubResource("GradientTexture2D_8ukde")
+
+[node name="PointLight2D4" type="PointLight2D" parent="LightContainer"]
+position = Vector2(-5, -5)
+scale = Vector2(0.1, 0.1)
+color = Color(1, 1, 0, 1)
+texture = SubResource("GradientTexture2D_8ukde")

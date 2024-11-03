@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://duci7spge2m4h"]
+
+[ext_resource type="Texture2D" uid="uid://lmb307qv4l41" path="res://Sprites/item_sheet_prototype.png" id="1_iwsft"]
+
+[sub_resource type="Gradient" id="Gradient_s0pwu"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4k6dc"]
+gradient = SubResource("Gradient_s0pwu")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="AmmoPneumatic" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_iwsft")
+region_enabled = true
+region_rect = Rect2(48, 0, 16, 16)
+
+[node name="LightContainer" type="Node2D" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="LightContainer"]
+position = Vector2(6, -6)
+scale = Vector2(0.1, 0.1)
+color = Color(1, 0, 0, 1)
+texture = SubResource("GradientTexture2D_4k6dc")
+
+[node name="PointLight2D2" type="PointLight2D" parent="LightContainer"]
+position = Vector2(-6, 6)
+scale = Vector2(0.1, 0.1)
+color = Color(1, 0, 0, 1)
+texture = SubResource("GradientTexture2D_4k6dc")
+
+[node name="PointLight2D3" type="PointLight2D" parent="LightContainer"]
+position = Vector2(-2, -2)
+scale = Vector2(0.1, 0.1)
+color = Color(1, 0, 0, 1)
+texture = SubResource("GradientTexture2D_4k6dc")
+
+[node name="PointLight2D4" type="PointLight2D" parent="LightContainer"]
+position = Vector2(2, 2)
+scale = Vector2(0.1, 0.1)
+color = Color(1, 0, 0, 1)
+texture = SubResource("GradientTexture2D_4k6dc")
