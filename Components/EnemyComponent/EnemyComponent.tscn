@@ -1,6 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://txv77ri45f3l"]
+[gd_scene load_steps=3 format=3 uid="uid://txv77ri45f3l"]
 
 [ext_resource type="Script" path="res://Components/EnemyComponent/enemy_component.gd" id="1_d3rlx"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_6xb8u"]
+
 [node name="EnemyComponent" type="Node2D"]
 script = ExtResource("1_d3rlx")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="VisionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VisionArea"]
+shape = SubResource("CircleShape2D_6xb8u")
+debug_color = Color(1, 1, 1, 0.42)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="VisionArea" to="." method="_on_vision_area_body_entered"]

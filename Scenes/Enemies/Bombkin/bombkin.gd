@@ -5,8 +5,15 @@ extends CharacterBody2D
 # Bombkin's unique behavior is (probably) exploding either when dead OR when close enough to the player
 # I think we should use the explosion image clustered together to make an explosive effect
 
+var is_chasing: bool = false
+
 func _ready() -> void:
 	$AnimatedSprite2D.play("idle")
+
+func _process(delta: float) -> void:
+	if $EnemyComponent.target != null and is_chasing == false:
+		is_chasing = true
+		$AnimatedSprite2D.play("walk")
 
 func _on_explosion_range_body_entered(body: Node2D) -> void:
 	# If we really end up getting advanced, we could use groups and make this
