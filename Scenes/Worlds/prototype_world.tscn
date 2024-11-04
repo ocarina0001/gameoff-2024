@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://voadx303h3ty"]
+[gd_scene load_steps=12 format=4 uid="uid://voadx303h3ty"]
 
 [ext_resource type="PackedScene" uid="uid://dsda7xt2sxfhk" path="res://Scenes/Player/player.tscn" id="1_m54wk"]
 [ext_resource type="Texture2D" uid="uid://cbnbipjl3ws4e" path="res://Sprites/prototype_tilesheet4.png" id="1_vbuqs"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://duci7spge2m4h" path="res://Scenes/Items/Ammo_Pneumatic/Ammo_Pneumatic.tscn" id="5_lr76e"]
 [ext_resource type="PackedScene" uid="uid://dfhi1x0264j8k" path="res://Scenes/Items/Ammo_Ballistic/Ammo_Ballistic.tscn" id="6_odcdt"]
 [ext_resource type="PackedScene" uid="uid://b452hxcv2s4a8" path="res://Scenes/Items/Oxygen/Oxygen.tscn" id="7_x2mvb"]
+[ext_resource type="PackedScene" uid="uid://bsoyll1wi571h" path="res://Scenes/Decorations/EmergencyLights/EmergencyRed.tscn" id="8_kp2sc"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_6ch1h"]
 vertices = PackedVector2Array(16, 16, -16, 16, -16, -16, 16, -16)
@@ -177,3 +178,19 @@ position = Vector2(172, -11)
 position = Vector2(148, -52)
 
 [node name="player" parent="." instance=ExtResource("1_m54wk")]
+
+[node name="EmergencyRed" parent="." instance=ExtResource("8_kp2sc")]
+position = Vector2(-76, -198)
+rotation = 3.14159
+
+[node name="EmergencyRed2" parent="." instance=ExtResource("8_kp2sc")]
+position = Vector2(50, -198)
+rotation = 3.14159
+
+[node name="EmergencyRed3" parent="." instance=ExtResource("8_kp2sc")]
+position = Vector2(260, -198)
+rotation = 3.14159
+
+[node name="EmergencyRed4" parent="." instance=ExtResource("8_kp2sc")]
+position = Vector2(359, 9)
+rotation = 4.71238
