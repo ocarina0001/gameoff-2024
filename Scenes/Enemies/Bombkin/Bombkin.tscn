@@ -1,0 +1,149 @@
+[gd_scene load_steps=16 format=3 uid="uid://cqjcn8tq0d8sl"]
+
+[ext_resource type="Script" path="res://Scenes/Enemies/Bombkin/bombkin.gd" id="1_c7j0e"]
+[ext_resource type="Texture2D" uid="uid://c2fbpt3gmhpmi" path="res://Sprites/bombkin_sheet.png" id="1_qapf0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gujv"]
+atlas = ExtResource("1_qapf0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a25yu"]
+atlas = ExtResource("1_qapf0")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mb044"]
+atlas = ExtResource("1_qapf0")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lyeeg"]
+atlas = ExtResource("1_qapf0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4iv1"]
+atlas = ExtResource("1_qapf0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ravn8"]
+atlas = ExtResource("1_qapf0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybo8h"]
+atlas = ExtResource("1_qapf0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ert1p"]
+atlas = ExtResource("1_qapf0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r508o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gujv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a25yu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gujv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a25yu")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_mb044")
+}],
+"loop": false,
+"name": &"explode",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lyeeg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4iv1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ravn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybo8h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ert1p")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_gn470"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2w0p8"]
+gradient = SubResource("Gradient_gn470")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vmbvb"]
+radius = 18.0278
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m5bc0"]
+
+[node name="Bombkin" type="CharacterBody2D"]
+script = ExtResource("1_c7j0e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_r508o")
+animation = &"explode"
+frame = 4
+frame_progress = 1.0
+
+[node name="LightContainer" type="Node2D" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="LightContainer"]
+position = Vector2(3, 1)
+scale = Vector2(0.1, 0.1)
+color = Color(1, 0.341176, 0, 1)
+energy = 0.8
+texture = SubResource("GradientTexture2D_2w0p8")
+
+[node name="PointLight2D2" type="PointLight2D" parent="LightContainer"]
+position = Vector2(-3, 1)
+scale = Vector2(0.1, 0.1)
+color = Color(1, 0.341176, 0, 1)
+energy = 0.8
+texture = SubResource("GradientTexture2D_2w0p8")
+
+[node name="PointLight2D3" type="PointLight2D" parent="LightContainer"]
+position = Vector2(-3, -4)
+scale = Vector2(0.1, 0.1)
+color = Color(1, 0.341176, 0, 1)
+energy = 0.8
+texture = SubResource("GradientTexture2D_2w0p8")
+
+[node name="PointLight2D4" type="PointLight2D" parent="LightContainer"]
+position = Vector2(3, -4)
+scale = Vector2(0.1, 0.1)
+color = Color(1, 0.341176, 0, 1)
+energy = 0.8
+texture = SubResource("GradientTexture2D_2w0p8")
+
+[node name="ExplosionRange" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExplosionRange"]
+shape = SubResource("CircleShape2D_vmbvb")
+debug_color = Color(0.951619, 0.13495, 0.443043, 0.42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_m5bc0")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="ExplosionRange" to="." method="_on_explosion_range_body_entered"]

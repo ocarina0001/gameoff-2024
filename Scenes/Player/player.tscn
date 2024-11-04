@@ -39,7 +39,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1nj8b"]
-size = Vector2(44, 44)
+size = Vector2(46, 48)
 
 [sub_resource type="Gradient" id="Gradient_om33o"]
 offsets = PackedFloat32Array(0, 0.52381)
@@ -80,7 +80,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
+position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_1nj8b")
 
 [node name="Camera" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_anql0")]
