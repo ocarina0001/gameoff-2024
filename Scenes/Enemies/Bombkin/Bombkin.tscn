@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://cqjcn8tq0d8sl"]
+[gd_scene load_steps=17 format=3 uid="uid://cqjcn8tq0d8sl"]
 
 [ext_resource type="Script" path="res://Scenes/Enemies/Bombkin/bombkin.gd" id="1_c7j0e"]
 [ext_resource type="Texture2D" uid="uid://c2fbpt3gmhpmi" path="res://Sprites/bombkin_sheet.png" id="1_qapf0"]
+[ext_resource type="PackedScene" uid="uid://txv77ri45f3l" path="res://Components/EnemyComponent/EnemyComponent.tscn" id="3_7uws4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7gujv"]
 atlas = ExtResource("1_qapf0")
@@ -144,6 +145,8 @@ debug_color = Color(0.951619, 0.13495, 0.443043, 0.42)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_m5bc0")
+
+[node name="EnemyComponent" parent="." instance=ExtResource("3_7uws4")]
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="ExplosionRange" to="." method="_on_explosion_range_body_entered"]
