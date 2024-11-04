@@ -23,23 +23,23 @@ region_rect = Rect2(16, 16, 16, 16)
 [node name="PointLight2D" type="PointLight2D" parent="LightContainer"]
 position = Vector2(-3, -4.76837e-07)
 scale = Vector2(0.1, 0.1)
-color = Color(0, 0, 1, 1)
+color = Color(0, 0.698039, 1, 1)
 texture = SubResource("GradientTexture2D_1law2")
 
 [node name="PointLight2D2" type="PointLight2D" parent="LightContainer"]
 position = Vector2(0, -2)
 scale = Vector2(0.1, 0.1)
-color = Color(0, 0, 1, 1)
+color = Color(0, 0.698039, 1, 1)
 texture = SubResource("GradientTexture2D_1law2")
 
 [node name="PointLight2D3" type="PointLight2D" parent="LightContainer"]
 position = Vector2(3, -1.19209e-07)
 scale = Vector2(0.1, 0.1)
-color = Color(0, 0, 1, 1)
+color = Color(0, 0.698039, 1, 1)
 texture = SubResource("GradientTexture2D_1law2")
 
 [node name="PointLight2D4" type="PointLight2D" parent="LightContainer"]
 position = Vector2(2.38419e-07, 2)
 scale = Vector2(0.1, 0.1)
-color = Color(0, 0, 1, 1)
+color = Color(0, 0.698039, 1, 1)
 texture = SubResource("GradientTexture2D_1law2")
