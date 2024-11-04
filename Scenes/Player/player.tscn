@@ -7,6 +7,7 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_j7qb6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1nj8b"]
+size = Vector2(44, 44)
 
 [sub_resource type="Gradient" id="Gradient_om33o"]
 offsets = PackedFloat32Array(0.0571429, 0.47619, 0.714286)
@@ -20,7 +21,7 @@ fill_from = Vector2(0.5, 0.5)
 [node name="player" type="CharacterBody2D" node_paths=PackedStringArray("animated_sprite")]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_vy3t3")
-speed = 250
+speed = 200
 animated_sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -31,6 +32,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("2_8al5j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_1nj8b")
 
 [node name="Camera" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_anql0")]
