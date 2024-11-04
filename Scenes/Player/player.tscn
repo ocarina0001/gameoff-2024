@@ -1,36 +1,83 @@
-[gd_scene load_steps=8 format=3 uid="uid://c0j1yllh8jusm"]
+[gd_scene load_steps=14 format=3 uid="uid://dsda7xt2sxfhk"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_vy3t3"]
-[ext_resource type="Texture2D" uid="uid://xbodxmy1rlho" path="res://Sprites/player_prototype.png" id="2_8al5j"]
+[ext_resource type="Texture2D" uid="uid://d3sfit15hooeu" path="res://Sprites/legs_sheet.png" id="2_haysr"]
+[ext_resource type="Texture2D" uid="uid://dnep3eo5xq225" path="res://Sprites/body_sheet.png" id="3_7vjk8"]
 [ext_resource type="PackedScene" uid="uid://d1l7gcr2rk64t" path="res://Scenes/Camera/camera.tscn" id="3_anql0"]
+[ext_resource type="Texture2D" uid="uid://beyrar1u2sjvw" path="res://Sprites/heads.png" id="4_ebg8i"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_j7qb6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbywr"]
+atlas = ExtResource("2_haysr")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ga10y"]
+atlas = ExtResource("2_haysr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvynk"]
+atlas = ExtResource("2_haysr")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q6ybc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbywr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ga10y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbywr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvynk")
+}],
+"loop": true,
+"name": &"moving",
+"speed": 10.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1nj8b"]
 size = Vector2(44, 44)
 
 [sub_resource type="Gradient" id="Gradient_om33o"]
-offsets = PackedFloat32Array(0.0571429, 0.47619, 0.714286)
-colors = PackedColorArray(1, 1, 1, 1, 0.567742, 0.567742, 0.567742, 1, 0, 0, 0, 1)
+offsets = PackedFloat32Array(0, 0.52381)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_iue1n"]
 gradient = SubResource("Gradient_om33o")
+fill_to = Vector2(1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_j6n0g"]
+gradient = SubResource("Gradient_om33o")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
 
-[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("animated_sprite")]
+[node name="player" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_vy3t3")
-speed = 200
-animated_sprite = NodePath("AnimatedSprite2D")
+speed = 250
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_j7qb6")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Legs" type="AnimatedSprite2D" parent="."]
 rotation = -1.57079
 scale = Vector2(2, 2)
-texture = ExtResource("2_8al5j")
+sprite_frames = SubResource("SpriteFrames_q6ybc")
+animation = &"moving"
+frame_progress = 0.597704
+
+[node name="Body" type="Sprite2D" parent="."]
+rotation = -1.57079
+scale = Vector2(2, 2)
+texture = ExtResource("3_7vjk8")
+
+[node name="Head" type="Sprite2D" parent="."]
+rotation = -1.57079
+scale = Vector2(2, 2)
+texture = ExtResource("4_ebg8i")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
@@ -40,14 +87,25 @@ shape = SubResource("RectangleShape2D_1nj8b")
 target = NodePath("..")
 
 [node name="ShadeLight" type="PointLight2D" parent="."]
-scale = Vector2(8, 8)
+position = Vector2(266, -1.90735e-06)
+rotation = -0.785398
+scale = Vector2(6, 6)
 energy = 0.8
 shadow_enabled = true
 shadow_filter_smooth = 16.0
 texture = SubResource("GradientTexture2D_iue1n")
 
 [node name="ShadelessLight" type="PointLight2D" parent="."]
-scale = Vector2(6, 6)
-energy = 0.4
+position = Vector2(176, 0)
+rotation = -0.785398
+scale = Vector2(4, 4)
+energy = 0.8
 shadow_filter_smooth = 16.0
 texture = SubResource("GradientTexture2D_iue1n")
+
+[node name="SelfLight" type="PointLight2D" parent="."]
+position = Vector2(6.10352e-05, 1.13687e-13)
+scale = Vector2(6, 6)
+energy = 0.5
+shadow_filter_smooth = 16.0
+texture = SubResource("GradientTexture2D_j6n0g")

@@ -7,7 +7,7 @@ extends Camera2D
 ## The scale at which the camera leans.
 @export var scale_lean : float = 0.1
 ## The max zoom level
-@export var max_zoom : float = 2
+@export var max_zoom : float = 2.5
 ## The minimum zoom level
 @export var min_zoom : float = 1
 ## The zoom factor to control how much zoom changes based on mouse distance
