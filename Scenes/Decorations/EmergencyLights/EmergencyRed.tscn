@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bsoyll1wi571h"]
 
-[ext_resource type="Script" path="res://Scenes/Decorations/EmergencyLights/light_slow_pulse.gd" id="1_vtpdm"]
+[ext_resource type="Script" path="res://Scenes/Decorations/EmergencyLights/light_pulse.gd" id="1_vtpdm"]
 [ext_resource type="Texture2D" uid="uid://c0uyxu1jipvs2" path="res://Sprites/emergency_light.png" id="2_bbj3e"]
 
 [sub_resource type="Gradient" id="Gradient_kellj"]

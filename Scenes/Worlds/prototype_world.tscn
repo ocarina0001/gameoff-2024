@@ -179,18 +179,20 @@ position = Vector2(148, -52)
 
 [node name="player" parent="." instance=ExtResource("1_m54wk")]
 
-[node name="EmergencyRed" parent="." instance=ExtResource("8_kp2sc")]
+[node name="EmergencyLightHolder" type="Node2D" parent="."]
+
+[node name="EmergencyRed" parent="EmergencyLightHolder" instance=ExtResource("8_kp2sc")]
 position = Vector2(-76, -198)
 rotation = 3.14159
 
-[node name="EmergencyRed2" parent="." instance=ExtResource("8_kp2sc")]
+[node name="EmergencyRed2" parent="EmergencyLightHolder" instance=ExtResource("8_kp2sc")]
 position = Vector2(50, -198)
 rotation = 3.14159
 
-[node name="EmergencyRed3" parent="." instance=ExtResource("8_kp2sc")]
+[node name="EmergencyRed3" parent="EmergencyLightHolder" instance=ExtResource("8_kp2sc")]
 position = Vector2(260, -198)
 rotation = 3.14159
 
-[node name="EmergencyRed4" parent="." instance=ExtResource("8_kp2sc")]
+[node name="EmergencyRed4" parent="EmergencyLightHolder" instance=ExtResource("8_kp2sc")]
 position = Vector2(359, 9)
-rotation = 4.71238
+rotation = -1.5708
