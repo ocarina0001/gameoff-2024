@@ -38,7 +38,6 @@ shape = SubResource("RectangleShape2D_1nj8b")
 
 [node name="Camera" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_anql0")]
 target = NodePath("..")
-smooth_lean = 5
 
 [node name="ShadeLight" type="PointLight2D" parent="."]
 scale = Vector2(8, 8)
