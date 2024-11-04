@@ -28,6 +28,7 @@ animated_sprite = NodePath("AnimatedSprite2D")
 sprite_frames = SubResource("SpriteFrames_j7qb6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.57079
 scale = Vector2(2, 2)
 texture = ExtResource("2_8al5j")
 
