@@ -1,3 +1,20 @@
-[gd_scene format=3 uid="uid://bh3ukwmoiabgt"]
+[gd_scene load_steps=2 format=3 uid="uid://bh3ukwmoiabgt"]
+
+[ext_resource type="Texture2D" uid="uid://brfkebhxe3ghu" path="res://Resources/test_light_gradient.tres" id="2_numyk"]
 
 [node name="DoorOverheadLight" type="Node2D"]
+
+[node name="Blue1" type="PointLight2D" parent="."]
+position = Vector2(-4, -14)
+color = Color(0.035, 0.378583, 0.7, 1)
+texture = ExtResource("2_numyk")
+
+[node name="Blue2" type="PointLight2D" parent="."]
+position = Vector2(4, -14)
+color = Color(0.035, 0.378583, 0.7, 1)
+texture = ExtResource("2_numyk")
+
+[node name="Lock Light" type="PointLight2D" parent="."]
+position = Vector2(0, -11)
+color = Color(0.0921668, 0.79, 0, 1)
+texture = ExtResource("2_numyk")
