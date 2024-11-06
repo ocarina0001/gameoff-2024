@@ -103,9 +103,7 @@ script = ExtResource("1_c7j0e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_r508o")
-animation = &"explode"
-frame = 4
-frame_progress = 1.0
+animation = &"idle"
 
 [node name="LightContainer" type="Node2D" parent="."]
 

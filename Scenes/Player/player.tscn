@@ -87,21 +87,23 @@ shape = SubResource("RectangleShape2D_1nj8b")
 target = NodePath("..")
 
 [node name="ShadeLight" type="PointLight2D" parent="."]
-position = Vector2(266, -1.90735e-06)
+position = Vector2(-5.36615, -0.122469)
 rotation = -0.785398
 scale = Vector2(6, 6)
 energy = 0.8
 shadow_enabled = true
 shadow_filter_smooth = 16.0
 texture = SubResource("GradientTexture2D_iue1n")
+offset = Vector2(31.9664, 31.9952)
 
 [node name="ShadelessLight" type="PointLight2D" parent="."]
-position = Vector2(176, 0)
+position = Vector2(-5.01538, 0.0178454)
 rotation = -0.785398
 scale = Vector2(4, 4)
 energy = 0.8
 shadow_filter_smooth = 16.0
 texture = SubResource("GradientTexture2D_iue1n")
+offset = Vector2(32.0025, 31.9961)
 
 [node name="SelfLight" type="PointLight2D" parent="."]
 position = Vector2(6.10352e-05, 1.13687e-13)
