@@ -1178,6 +1178,7 @@ tile_map_data = PackedByteArray("AAACAAIAAQAAAAAAAAD8/woAAQABAAAAAAD8/wsAAQABAAE
 tile_set = SubResource("TileSet_1vnc7")
 
 [node name="player" parent="." instance=ExtResource("7_hr2ii")]
+platform_floor_layers = 4294901760
 
 [node name="Emergency light container" type="Node2D" parent="."]
 

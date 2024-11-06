@@ -46,7 +46,7 @@ func get_input():
 func _physics_process(delta):
 	if can_move == true:
 		get_input()
-		move_and_collide(velocity * delta)
+		move_and_slide()
 
 func _process(delta: float) -> void:
 	var direction = get_global_mouse_position() - global_position

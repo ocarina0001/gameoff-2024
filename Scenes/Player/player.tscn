@@ -38,8 +38,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1nj8b"]
-size = Vector2(46, 48)
+[sub_resource type="CircleShape2D" id="CircleShape2D_cjmpy"]
+radius = 23.0868
 
 [sub_resource type="Gradient" id="Gradient_om33o"]
 offsets = PackedFloat32Array(0, 0.52381)
@@ -57,6 +57,7 @@ fill_to = Vector2(1, 0.5)
 
 [node name="player" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
+motion_mode = 1
 script = ExtResource("1_vy3t3")
 speed = 200
 
@@ -81,7 +82,7 @@ region_rect = Rect2(0, 0, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 0)
-shape = SubResource("RectangleShape2D_1nj8b")
+shape = SubResource("CircleShape2D_cjmpy")
 
 [node name="Camera" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_anql0")]
 target = NodePath("..")
