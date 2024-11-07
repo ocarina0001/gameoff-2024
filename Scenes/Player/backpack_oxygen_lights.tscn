@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7kpnntd46xy6"]
+
+[ext_resource type="Texture2D" uid="uid://dnep3eo5xq225" path="res://Sprites/body_sheet.png" id="1_gqksd"]
+[ext_resource type="Texture2D" uid="uid://brfkebhxe3ghu" path="res://Resources/test_light_gradient.tres" id="2_vht52"]
+
+[node name="backpack oxygen lights" type="Node2D"]
+
+[node name="BodySheet" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_gqksd")
+
+[node name="light1" type="PointLight2D" parent="."]
+position = Vector2(9, -12)
+color = Color(0.211765, 0.701961, 0.545098, 1)
+texture = ExtResource("2_vht52")
+
+[node name="light2" type="PointLight2D" parent="."]
+position = Vector2(6, -12)
+color = Color(0.211765, 0.701961, 0.545098, 1)
+texture = ExtResource("2_vht52")
+
+[node name="light3" type="PointLight2D" parent="."]
+position = Vector2(3, -12)
+color = Color(0.211765, 0.701961, 0.545098, 1)
+texture = ExtResource("2_vht52")
+
+[node name="light4" type="PointLight2D" parent="."]
+position = Vector2(0, -12)
+color = Color(0.211765, 0.701961, 0.545098, 1)
+texture = ExtResource("2_vht52")
+
+[node name="light5" type="PointLight2D" parent="."]
+position = Vector2(-3, -12)
+color = Color(0.211765, 0.701961, 0.545098, 1)
+texture = ExtResource("2_vht52")
+
+[node name="light6" type="PointLight2D" parent="."]
+position = Vector2(-6, -12)
+color = Color(0.211765, 0.701961, 0.545098, 1)
+texture = ExtResource("2_vht52")
+
+[node name="light7" type="PointLight2D" parent="."]
+position = Vector2(-9, -12)
+color = Color(0.211765, 0.701961, 0.545098, 1)
+texture = ExtResource("2_vht52")

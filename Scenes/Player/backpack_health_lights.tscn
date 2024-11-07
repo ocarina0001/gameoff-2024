@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6w2gmjxidgsy"]
+
+[ext_resource type="Texture2D" uid="uid://dnep3eo5xq225" path="res://Sprites/body_sheet.png" id="1_5um8s"]
+[ext_resource type="Texture2D" uid="uid://brfkebhxe3ghu" path="res://Resources/test_light_gradient.tres" id="2_p3uy8"]
+
+[node name="backpack health lights" type="Node2D"]
+
+[node name="BodySheet" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_5um8s")
+
+[node name="light1" type="PointLight2D" parent="."]
+position = Vector2(9, -15)
+color = Color(0.8, 0.239216, 0.278431, 1)
+texture = ExtResource("2_p3uy8")
+
+[node name="light2" type="PointLight2D" parent="."]
+position = Vector2(6, -15)
+color = Color(0.8, 0.239216, 0.278431, 1)
+texture = ExtResource("2_p3uy8")
+
+[node name="light3" type="PointLight2D" parent="."]
+position = Vector2(3, -15)
+color = Color(0.8, 0.239216, 0.278431, 1)
+texture = ExtResource("2_p3uy8")
+
+[node name="light4" type="PointLight2D" parent="."]
+position = Vector2(0, -15)
+color = Color(0.8, 0.239216, 0.278431, 1)
+texture = ExtResource("2_p3uy8")
+
+[node name="light5" type="PointLight2D" parent="."]
+position = Vector2(-3, -15)
+color = Color(0.8, 0.239216, 0.278431, 1)
+texture = ExtResource("2_p3uy8")
+
+[node name="light6" type="PointLight2D" parent="."]
+position = Vector2(-6, -15)
+color = Color(0.8, 0.239216, 0.278431, 1)
+texture = ExtResource("2_p3uy8")
+
+[node name="light7" type="PointLight2D" parent="."]
+position = Vector2(-9, -15)
+color = Color(0.8, 0.239216, 0.278431, 1)
+texture = ExtResource("2_p3uy8")
