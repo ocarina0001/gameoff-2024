@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dfhi1x0264j8k" path="res://Scenes/Items/Ammo_Ballistic/Ammo_Ballistic.tscn" id="5_06u4e"]
 [ext_resource type="PackedScene" uid="uid://b452hxcv2s4a8" path="res://Scenes/Items/Oxygen/Oxygen.tscn" id="6_86n7b"]
 [ext_resource type="Texture2D" uid="uid://cjiogwxbfwh62" path="res://Sprites/door.png" id="6_wmhfl"]
-[ext_resource type="PackedScene" uid="uid://bh3ukwmoiabgt" path="res://Scenes/Decorations/DoorOverheadLight/DoorOverheadLight.tscn" id="7_5t4dw"]
+[ext_resource type="PackedScene" uid="uid://bh3ukwmoiabgt" path="res://Scenes/Decorations/Door/DoorOverheadLight.tscn" id="7_5t4dw"]
 [ext_resource type="PackedScene" uid="uid://dsda7xt2sxfhk" path="res://Scenes/Player/player.tscn" id="7_hr2ii"]
 [ext_resource type="Texture2D" uid="uid://bk01dt6eet442" path="res://Sprites/secret door.png" id="7_ysgsh"]
 [ext_resource type="PackedScene" uid="uid://bsoyll1wi571h" path="res://Scenes/Decorations/EmergencyLights/EmergencyRed.tscn" id="8_ckhty"]
