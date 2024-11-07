@@ -22,6 +22,17 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=2
 
+[file_customization]
+
+folder_colors={
+"res://Components/": "red",
+"res://Resources/": "orange",
+"res://Resources/Tilesets/": "orange",
+"res://Scenes/": "yellow",
+"res://Scripts/": "green",
+"res://Sprites/": "teal"
+}
+
 [input]
 
 w={
