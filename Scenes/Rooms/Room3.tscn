@@ -1,3 +1,4 @@
 [gd_scene format=3 uid="uid://dc1mmg7vt1hb5"]
 
 [node name="Room1" type="Node2D"]
+z_index = -50

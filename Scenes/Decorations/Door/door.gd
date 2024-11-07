@@ -1,5 +1,6 @@
 extends Node2D
 
+## Determines whether or not the door is open.
 @export var is_open: bool = false
 
 func _ready() -> void:

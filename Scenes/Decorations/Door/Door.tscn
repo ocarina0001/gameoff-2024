@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Decorations/Door/door.gd" id="1_3jd8n"]
 [ext_resource type="TileSet" uid="uid://do6g1upuip76u" path="res://Resources/Tilesets/spaceroom_tileset.tres" id="1_7q8fk"]
 
-[node name="Door" type="Node2D"]
+[node name="Door" type="Node2D" groups=["door"]]
 script = ExtResource("1_3jd8n")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
