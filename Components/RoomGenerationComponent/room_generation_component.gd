@@ -3,6 +3,13 @@ extends Node2D
 @export var rooms_to_generate: Array[PackedScene]
 var level_generation_test: Node2D
 
+# 11/8/2024
+# When a room is picked, we should compare the rotation of the current door 'child'
+# and then find a random door in the new room
+# then rotate the room to make the door "match" the 'child' door
+# and then do the stupid math shit to make the rooms connect
+# and HOPEFULLY that should work.
+
 func _ready() -> void:
 	level_generation_test = get_parent().get_parent()
 
