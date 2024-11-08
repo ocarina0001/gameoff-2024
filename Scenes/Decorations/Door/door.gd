@@ -5,4 +5,4 @@ extends Node2D
 
 func _ready() -> void:
 	if is_open:
-		$TileMapLayer.set_cell(Vector2i(0,0), 1, Vector2i(0,0))
+		$DoorFrame.set_cell(Vector2i(0,0), 1, Vector2i(0,0))
