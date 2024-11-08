@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhig7bfwhdenn"
-path="res://.godot/imported/decals cargo.png-ad6a426c1e7246afe3851df85cac28d6.ctex"
+uid="uid://bbpv1mldk8xl1"
+path="res://.godot/imported/weapons sheet.png-d1275c3304c88b1ab05b00960acfd95b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/decals cargo.png"
-dest_files=["res://.godot/imported/decals cargo.png-ad6a426c1e7246afe3851df85cac28d6.ctex"]
+source_file="res://Sprites/weapons sheet.png"
+dest_files=["res://.godot/imported/weapons sheet.png-d1275c3304c88b1ab05b00960acfd95b.ctex"]
 
 [params]
 

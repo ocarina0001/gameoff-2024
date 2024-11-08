@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhig7bfwhdenn"
-path="res://.godot/imported/decals cargo.png-ad6a426c1e7246afe3851df85cac28d6.ctex"
+uid="uid://dk5rp0yv50mgs"
+path="res://.godot/imported/props living.png-03f996793f42db4b111321988c507505.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/decals cargo.png"
-dest_files=["res://.godot/imported/decals cargo.png-ad6a426c1e7246afe3851df85cac28d6.ctex"]
+source_file="res://Sprites/props living.png"
+dest_files=["res://.godot/imported/props living.png-03f996793f42db4b111321988c507505.ctex"]
 
 [params]
 
