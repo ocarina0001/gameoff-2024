@@ -2,6 +2,7 @@ extends Node2D
 
 ## Determines whether or not the door is open. If the door is open, it connects to another room.
 @export var is_forced_open: bool = false
+@onready var teleport_point: Node2D = $TeleportPoint
 var is_open: bool
 var starting_room: Node2D # This gets set to get_parent()
 var connecting_room: Node2D # This gets programatically assigned
@@ -18,4 +19,4 @@ func _ready() -> void:
 func _on_teleporter_body_entered(body: Node2D) -> void:
 	if body.name == "player" and connecting_room != null:
 		print("teleporting")
-		body.position = connecting_room.position
+		body.position = connecting_room.teleport_point.global_position

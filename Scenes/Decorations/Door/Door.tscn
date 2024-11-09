@@ -23,4 +23,7 @@ tile_set = ExtResource("1_7q8fk")
 position = Vector2(16, -2)
 shape = SubResource("RectangleShape2D_fop6p")
 
+[node name="TeleportPoint" type="Node2D" parent="."]
+position = Vector2(16, 28)
+
 [connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]
