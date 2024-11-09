@@ -31,7 +31,7 @@ is_forced_open = true
 
 [node name="Door2" parent="." instance=ExtResource("7_pe4fe")]
 position = Vector2(-32, 160)
-rotation = 4.71238
+rotation = -1.5708
 
 [node name="Door3" parent="." instance=ExtResource("7_pe4fe")]
 position = Vector2(224, -32)

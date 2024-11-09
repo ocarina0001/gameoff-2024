@@ -1,9 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://0pc68njpec5a"]
 
 [ext_resource type="Script" path="res://Components/RoomGenerationComponent/room_generation_component.gd" id="1_6lfwn"]
-[ext_resource type="PackedScene" uid="uid://y4yygrkk8xvj" path="res://Scenes/Rooms/Room1.tscn" id="2_5uaqv"]
-[ext_resource type="PackedScene" uid="uid://xa1firpd7ugb" path="res://Scenes/Rooms/Room2.tscn" id="3_fvlgg"]
+[ext_resource type="PackedScene" uid="uid://y4yygrkk8xvj" path="res://Scenes/Rooms/Room1.tscn" id="2_u6afd"]
+[ext_resource type="PackedScene" uid="uid://xa1firpd7ugb" path="res://Scenes/Rooms/Room2.tscn" id="3_7iy8f"]
 
 [node name="RoomGenerationComponent" type="Node2D"]
 script = ExtResource("1_6lfwn")
-rooms_to_generate = Array[PackedScene]([ExtResource("2_5uaqv"), ExtResource("3_fvlgg")])
+rooms_to_generate = Array[PackedScene]([ExtResource("2_u6afd"), ExtResource("3_7iy8f")])

@@ -9,8 +9,8 @@ var connecting_room: Node2D # This gets programatically assigned
 
 func _ready() -> void:
 	starting_room = get_parent()
-	#if randi_range(0, 1) == 0:
-		#is_open = true
+	if randi_range(0, 1) == 0:
+		is_open = true
 	if is_forced_open:
 		is_open = true
 	if is_open:
