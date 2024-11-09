@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://chcqyi8oypsgh"]
+[gd_scene load_steps=6 format=4 uid="uid://chcqyi8oypsgh"]
 
 [ext_resource type="TileSet" uid="uid://do6g1upuip76u" path="res://Resources/Tilesets/spaceroom_tileset.tres" id="1_0wamo"]
 [ext_resource type="Script" path="res://Scripts/tile_avoidance_script.gd" id="2_2roes"]
 [ext_resource type="PackedScene" uid="uid://dsda7xt2sxfhk" path="res://Scenes/Player/player.tscn" id="2_kstyr"]
 [ext_resource type="TileSet" uid="uid://337j58mocmra" path="res://Resources/Tilesets/props_tileset.tres" id="3_pi7ug"]
-[ext_resource type="PackedScene" uid="uid://0pc68njpec5a" path="res://Components/RoomGenerationComponent/RoomGenerationComponent.tscn" id="6_qd37l"]
 [ext_resource type="PackedScene" uid="uid://6oow6nrb24hl" path="res://Scenes/Decorations/Door/Door.tscn" id="7_pe4fe"]
 
 [node name="StarterRoom" type="Node2D"]
@@ -39,5 +38,3 @@ position = Vector2(224, -32)
 [node name="Door4" parent="." instance=ExtResource("7_pe4fe")]
 position = Vector2(192, 352)
 rotation = 3.14159
-
-[node name="RoomGenerationComponent" parent="." instance=ExtResource("6_qd37l")]

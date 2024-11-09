@@ -7,10 +7,8 @@ extends Node2D
 @export var rooms_to_generate: Array[PackedScene]
 
 func _ready() -> void:
-	if Singleton.current_rooms >= Singleton.maximum_rooms:
-		return
 	for door in get_parent().get_children():
-		if door.is_in_group("door") and door.is_open:
+		if door.is_in_group("door") and door.is_open and door.connecting_room == null:
 			var random_room := rooms_to_generate[int(randi_range(0, rooms_to_generate.size() - 1))]
 			var room_instance := random_room.instantiate()
 			
@@ -24,7 +22,6 @@ func _ready() -> void:
 				spawn_room(room_instance, door, 0, -2048)
 			elif rounded_door_rotation == 180:
 				spawn_room(room_instance, door, 0, 2048)
-			
 
 func spawn_room(room_instance: Node2D, door: Node2D, x: int, y: int):
 	var opposite_rotation := (roundi(door.rotation_degrees) + 180) % 360
@@ -34,7 +31,6 @@ func spawn_room(room_instance: Node2D, door: Node2D, x: int, y: int):
 	for child in room_instance.get_children():
 		if child.is_in_group("door"):
 			var child_door_rotation := roundi(child.rotation_degrees)
-			print("Comparing " + str(child_door_rotation) + " and " + str(opposite_rotation))
 			if child_door_rotation == opposite_rotation:
 				child.is_open = true
 				child.connecting_room = door

@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxxfgpq8o0nw8"]
+[gd_scene load_steps=3 format=3 uid="uid://bxxfgpq8o0nw8"]
 
+[ext_resource type="PackedScene" uid="uid://0pc68njpec5a" path="res://Components/RoomGenerationComponent/RoomGenerationComponent.tscn" id="1_3qexv"]
 [ext_resource type="PackedScene" uid="uid://chcqyi8oypsgh" path="res://Scenes/Rooms/StarterRoom.tscn" id="1_jgy4f"]
 
 [node name="LevelGenerationTest" type="Node2D"]
@@ -7,5 +8,7 @@
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false
 color = Color(0.0430392, 0.0430392, 0.0430392, 1)
+
+[node name="RoomGenerationComponent" parent="." instance=ExtResource("1_3qexv")]
 
 [node name="StarterRoom" parent="." instance=ExtResource("1_jgy4f")]
