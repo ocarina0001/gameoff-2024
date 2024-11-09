@@ -21,4 +21,3 @@ tile_set = ExtResource("3_a3cu7")
 [node name="Door" parent="." instance=ExtResource("4_ex4rh")]
 position = Vector2(-32, 160)
 rotation = -1.57079
-is_open = true

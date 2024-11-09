@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://6oow6nrb24hl"]
+[gd_scene load_steps=4 format=3 uid="uid://6oow6nrb24hl"]
 
 [ext_resource type="Script" path="res://Scenes/Decorations/Door/door.gd" id="1_3jd8n"]
 [ext_resource type="TileSet" uid="uid://do6g1upuip76u" path="res://Resources/Tilesets/spaceroom_tileset.tres" id="1_7q8fk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fop6p"]
+size = Vector2(36, 16)
 
 [node name="Door" type="Node2D" groups=["door"]]
 script = ExtResource("1_3jd8n")
@@ -13,3 +16,11 @@ tile_set = ExtResource("1_7q8fk")
 [node name="DoorUnder" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0)
 tile_set = ExtResource("1_7q8fk")
+
+[node name="Teleporter" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teleporter"]
+position = Vector2(16, -2)
+shape = SubResource("RectangleShape2D_fop6p")
+
+[connection signal="body_entered" from="Teleporter" to="." method="_on_teleporter_body_entered"]
